@@ -1,0 +1,25 @@
+.headerOption {
+  
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 82px;
+}
+
+#houseIcon {
+  box-sizing: border-box;
+  
+  font-size: 30px;
+}
+
+p {
+  box-sizing: border-box;
+  height: 15px;
+  font-size: 12px;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+}
+
