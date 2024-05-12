@@ -1,15 +1,15 @@
 import React from 'react'
-import HomeIcon from '@mui/icons-material/Home';
 import './styles/HeaderOption.css'
 
 interface Props{
   heading: string;
+  Icon: React.ElementType;
 }
-function HeaderOption({heading}: Props) {
+function HeaderOption({heading, Icon}: Props) {
   return (
     <div className='headerOption'>
     
-      <HomeIcon id='houseIcon'></HomeIcon>
+      <Icon id='icon'></Icon>
       <p>{heading}</p>
       
     </div>
