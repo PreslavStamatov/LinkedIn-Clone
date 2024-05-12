@@ -1,0 +1,9 @@
+#suggested-account{
+    display: flex;
+}
+
+#profile-information{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
