@@ -1,9 +1,63 @@
 #suggested-account{
     display: flex;
+    height: auto;
+    margin: 10px;
+}
+
+.profile-icon{
+    width: 45px !important;
+    height: 45px !important;
+    cursor: pointer;
 }
 
 #profile-information{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: 10px;
+}
+
+#name{
+    align-content: flex-end;
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#description{
+    opacity: 80%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    width: 175px;
+    height: auto;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#follow-button{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 98px;
+    height: fit-content;
+    border: 2px solid rgb(78, 78, 78);
+    justify-content: center;
+    color: rgb(78, 78, 78);
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+#follow-button:hover{
+    background-color: rgb(228, 228, 228);
+    color: black;
+}
+
+#follow-button > p{
+    font-size: 15px;
+    font-weight: 600;
+    height: 24px;
 }

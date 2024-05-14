@@ -6,6 +6,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import WorkIcon from '@mui/icons-material/Work';
 import SmsIcon from '@mui/icons-material/Sms';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import Avatar from '@mui/material/Avatar';
 
 function Header() {
   return (
@@ -28,6 +29,7 @@ function Header() {
         <HeaderOption Icon={WorkIcon} heading='Jobs'></HeaderOption>
         <HeaderOption Icon={SmsIcon} heading='Messaging'></HeaderOption>
         <HeaderOption Icon={NotificationsIcon} heading='Notifications'></HeaderOption>
+        <HeaderOption Avatar={Avatar} src='https://t.ly/64wxR' heading='Profile'></HeaderOption>
       </div>
       
     </div>

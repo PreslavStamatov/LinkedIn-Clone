@@ -3,15 +3,18 @@ import './styles/HeaderOption.css'
 
 interface Props{
   heading: string;
-  Icon: React.ElementType;
+  Icon?: React.ElementType;
+  Avatar?: React.ElementType;
+  src?: string;
 }
-function HeaderOption({heading, Icon}: Props) {
+
+function HeaderOption({heading, Icon, Avatar, src}: Props) {
   return (
     <div className='headerOption'>
     
-      <Icon id='icon'></Icon>
+      {Icon && <Icon className='icon'></Icon>}
+      {Avatar && <Avatar src={src} className='icon'></Avatar>}
       <p>{heading}</p>
-      
     </div>
   )
 }
