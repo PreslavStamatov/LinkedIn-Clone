@@ -1,0 +1,58 @@
+#hiring-section {
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 260px;
+  border: 2px solid rgb(206, 206, 206);
+  border-radius: 15px;
+  width: 100%;
+}
+
+#hiring-photo{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  
+}
+
+#hiring-header{
+  font-size: 25px;
+  
+}
+
+#hiring-text{
+  font-size: medium;
+  opacity: 80%;
+  height: px;
+}
+
+#buttons-section {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  box-sizing: border-box;
+  width: 45%;
+  height: 30px;
+  background-color: white;
+  border-radius: 15px;
+  transition: 0.5s;
+  border: 1px solid rgb(129, 129, 129);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: grey;
+}
+
+#hiring-text-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,36 @@
+#login-container{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 450px;
+  position: relative;
+  left: 33%;
+  top:100px;
+  align-items: center;
+}
+
+input, #signin-input{
+  box-sizing: border-box;
+  height: 11%;
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+#login-logo{
+  width: 60%;
+  height: 16%;
+}
+
+#signin-input{
+  background-color: rgb(0, 88, 146);
+  color: white;
+}
+
+#register-now{
+  text-decoration: underline;
+  color: rgb(0, 118, 197);
+  cursor: pointer;
+}
