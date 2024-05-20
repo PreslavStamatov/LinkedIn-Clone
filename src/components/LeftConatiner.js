@@ -19,7 +19,7 @@ function LeftContainer() {
         <img src={user.imgSrc}  alt="" />
         <div id='username'>
           <p id='username-name'>{user.name}</p>
-          <p>I SUM AKO</p>
+          <p>{user.email}</p>
         </div>
 
         <div id='connections-container'>

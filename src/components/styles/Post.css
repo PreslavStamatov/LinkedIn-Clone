@@ -1,0 +1,43 @@
+#post{
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+#post-top-side{
+  display: flex;
+  padding-top: 5px;
+}
+
+#post-info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+#post-img{
+  margin-left: 10px;
+}
+
+#post-username{
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+#post-date{
+  color: grey;
+}
+
+#post-text{
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#post-options-container{
+  display: flex;
+  justify-content: space-around;
+}

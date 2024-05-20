@@ -27,7 +27,6 @@
   border-radius: 40px;
   background-color: white;
   border: 1px solid rgb(129, 129, 129);
-  
   display: flex;
   align-items: center;
 }
@@ -40,7 +39,7 @@
   height: 100%;
   outline: none;
   cursor: text;
-  
+  margin: 0px;
 }
 
 

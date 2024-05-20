@@ -3,6 +3,8 @@ import './styles/CentralContainer.css'
 import PostWritingSection from './PostWritingSection'
 
 function CentralContainer() {
+  
+
   return (
     <div id='central-container'>
       <HiringSection></HiringSection>

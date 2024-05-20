@@ -7,12 +7,15 @@ import WorkIcon from '@mui/icons-material/Work';
 import SmsIcon from '@mui/icons-material/Sms';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Avatar from '@mui/material/Avatar';
-import { useSelector } from 'react-redux';
-import { selectUser } from '../features/user/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUser } from '../features/user/userSlice';
 
 function Header() {
 
   const user = useSelector(selectUser);
+  const name = user.name;
+  const firstName = name.split(' ')[0];
+  const dispatch = useDispatch();
 
   return (
     <div className='header'>
@@ -34,7 +37,7 @@ function Header() {
         <HeaderOption Icon={WorkIcon} heading='Jobs'></HeaderOption>
         <HeaderOption Icon={SmsIcon} heading='Messaging'></HeaderOption>
         <HeaderOption Icon={NotificationsIcon} heading='Notifications'></HeaderOption>
-        <HeaderOption Avatar={Avatar} src={user.imgSrc} heading='Profile'></HeaderOption>
+        <HeaderOption  onClick={() => dispatch(logout())} Avatar={Avatar} src={user.imgSrc} heading={firstName}></HeaderOption>
       </div>
       
     </div>

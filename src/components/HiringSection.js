@@ -5,6 +5,8 @@ import { selectUser } from '../features/user/userSlice';
 function HiringSection() {
   
   const user = useSelector(selectUser);
+  const name = user.name;
+  const firstName = name.split(' ')[0];
   
   return (
 
@@ -12,7 +14,7 @@ function HiringSection() {
       <img src={user.imgSrc} alt="profile-img" id='hiring-photo'/>
       <div id='hiring-text-container'>
       <h3 id='hiring-header'>
-        Hi Preslav, are you hiring? 
+        Hi {firstName}, are you hiring? 
       </h3>
       
       <p id='hiring-text'>
