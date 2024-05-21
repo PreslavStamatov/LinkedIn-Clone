@@ -3,6 +3,9 @@ import React from 'react'
 import './styles/Post.css'
 import PostWritingIcon from './PostWritingIcon'
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
+import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
+import RepeatOutlinedIcon from '@mui/icons-material/RepeatOutlined';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
 function Post({imgSrc, userName, currentTime, text}) {
 
@@ -20,10 +23,10 @@ function Post({imgSrc, userName, currentTime, text}) {
         {text}
       </p>
       <div id='post-options-container'>
-        <PostWritingIcon id='post-option-icon' Icon={ThumbUpAltOutlinedIcon} color={'grey'}></PostWritingIcon>
-        <PostWritingIcon id='post-option-icon' Icon={ThumbUpAltOutlinedIcon} color={'grey'}></PostWritingIcon>
-        <PostWritingIcon id='post-option-icon' Icon={ThumbUpAltOutlinedIcon} color={'grey'}></PostWritingIcon>
-        <PostWritingIcon id='post-option-icon' Icon={ThumbUpAltOutlinedIcon} color={'grey'}></PostWritingIcon>
+        <PostWritingIcon id='post-option-icon' Icon={ThumbUpAltOutlinedIcon} text='Like' color={'grey'}></PostWritingIcon>
+        <PostWritingIcon id='post-option-icon' Icon={CommentOutlinedIcon} text='Comment' color={'grey'}></PostWritingIcon>
+        <PostWritingIcon id='post-option-icon' Icon={RepeatOutlinedIcon} text='Repost' color={'grey'}></PostWritingIcon>
+        <PostWritingIcon id='post-option-icon' Icon={SendOutlinedIcon} text='Send' color={'grey'}></PostWritingIcon>
       </div>
     </div>
   )
