@@ -7,6 +7,7 @@ import RightContainer from './components/RightContainer';
 import { selectUser } from './features/user/userSlice';
 import { useSelector } from 'react-redux';
 import Login from './components/Login';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
 
@@ -15,17 +16,20 @@ function App() {
   const user = useSelector(selectUser);
 
   return (
-    user ? 
-    (<div className='app'>
-    <Header></Header>
+    <Routes>
+      <Route path='/' element={user ? 
+        <div className='app'>
+        <Header></Header>
 
-    <div id='main-content-container'>
-      <LeftContainer></LeftContainer>
-      <CentralContainer></CentralContainer>
-      <RightContainer></RightContainer>
-    </div>
-    
-    </div>) : (<Login></Login>)
+        <div id='main-content-container'>
+          <LeftContainer></LeftContainer>
+          <CentralContainer></CentralContainer>
+          <RightContainer></RightContainer>
+        </div>
+        
+        </div> : <Login></Login>} />
+      
+    </Routes>
   );
 }
 

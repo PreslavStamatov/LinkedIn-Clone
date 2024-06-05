@@ -1,9 +1,7 @@
 #post{
   background-color: white;
-  margin-top: 10px;
+  margin-top: 5px;
   border-radius: 10px;
-  box-sizing: border-box;
-  border: 2px solid rgb(206, 206, 206);
 }
 
 #post-top-side{
@@ -18,7 +16,7 @@
 }
 
 #post-img{
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 #post-username{
@@ -29,6 +27,7 @@
 
 #post-date{
   color: grey;
+  padding-top: 1px;
 }
 
 #post-text{
@@ -42,5 +41,5 @@
 #post-options-container{
   display: flex;
   justify-content: space-around;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }

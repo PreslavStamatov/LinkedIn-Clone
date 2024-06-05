@@ -8,27 +8,63 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import CreateIcon from '@mui/icons-material/Create';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../features/user/userSlice';
-import HeaderOption from './HeaderOption'
-import { useState } from 'react';
-import HiringSection from './HiringSection';
+import { useEffect, useState } from 'react';
 import Post from './Post';
 
 
 
 function PostWritingSection() {
 
+  
   const user = useSelector(selectUser);
-
   const [components, setComponents] = useState([]);
   const [postText, changePostText] = useState('');
 
-  // Function to add a new component
+  // const fetchingUserPosts = () => {
+  //   fetch(`localhost:8080/post/getAll/${user.email}`,
+  //   {
+  //     method: "POST",
+  //     headers: {"Content-Type":"application/json"},
+  //     body:JSON.stringify(user)
+  //   }
+  //   ).then(response => response.json()).then(e => console.log(e))
+  // }
+
+  
+
+  useEffect(() => {
+    // Fetch the posts of the logged-in user upon loading the main page
+    fetch('http://localhost:8080/post/getAll/' + user.email,
+    {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+    }
+    ).then(response => response.json()).then(postsArr => setComponents(postsArr))
+  }, []);
+
   const addComponent = (e) => {
     if(e.key === 'Enter') {
       const current = new Date();
-      const currentDate = `${current.getHours().toString()}:${current.getMinutes().toString().padStart(2, '0')} ${current.getDate().toString()}.${(current.getMonth() + 1).toString()}.${current.getFullYear().toString()}`;
-  
-      setComponents([...components, { id: components.length + 1, currentTime: currentDate, text: postText}]);
+      const currentDate = `${current.getFullYear().toString()}.${(current.getMonth() + 1).toString().padStart(2, '0')}.${current.getDate().toString().padStart(2, '0')}`;
+      
+      const post = {id: components.length + 1, date: currentDate, text: postText}
+      changePostText('');
+      setComponents([...components, post]);
+
+      const textForDB = post.text;
+      const dateForDB = String(post.date.toString().replaceAll(".","-"));
+      const postForDB = {text: `${textForDB}`, date: `${dateForDB}`};
+
+      console.log(JSON.stringify(postForDB));
+
+      fetch("http://192.168.1.16:8080/post/add",
+      {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body:JSON.stringify(postForDB)
+      }
+      )
+
     }
   };
 
@@ -77,7 +113,7 @@ function PostWritingSection() {
 
     <div className="components-container">
           {components.map((component) => (
-            <Post imgSrc={user.imgSrc} userName={user.name} currentTime={component.currentTime} text = {component.text}></Post>
+            <Post imgSrc={user.imgSrc} userName={user.name} currentTime={component.date} text = {component.text}></Post>
           ))}
         </div>
 

@@ -23,10 +23,10 @@ function Post({imgSrc, userName, currentTime, text}) {
         {text}
       </p>
       <div id='post-options-container'>
-        <PostWritingIcon id='post-option-icon' Icon={ThumbUpAltOutlinedIcon} text='Like' color={'grey'}></PostWritingIcon>
-        <PostWritingIcon id='post-option-icon' Icon={CommentOutlinedIcon} text='Comment' color={'grey'}></PostWritingIcon>
-        <PostWritingIcon id='post-option-icon' Icon={RepeatOutlinedIcon} text='Repost' color={'grey'}></PostWritingIcon>
-        <PostWritingIcon id='post-option-icon' Icon={SendOutlinedIcon} text='Send' color={'grey'}></PostWritingIcon>
+        <PostWritingIcon id='post-option-icon' text='Like' Icon={ThumbUpAltOutlinedIcon} color={'grey'}></PostWritingIcon>
+        <PostWritingIcon id='post-option-icon' text='Comment' Icon={CommentOutlinedIcon} color={'grey'}></PostWritingIcon>
+        <PostWritingIcon id='post-option-icon' text='Repost' Icon={RepeatOutlinedIcon} color={'grey'}></PostWritingIcon>
+        <PostWritingIcon id='post-option-icon' text='Send' Icon={SendOutlinedIcon} color={'grey'}></PostWritingIcon>
       </div>
     </div>
   )
