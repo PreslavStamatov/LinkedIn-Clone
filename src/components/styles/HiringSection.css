@@ -9,6 +9,8 @@
   border: 2px solid rgb(206, 206, 206);
   border-radius: 15px;
   width: 100%;
+  position: relative;
+  z-index: 0;
 }
 
 #hiring-photo{

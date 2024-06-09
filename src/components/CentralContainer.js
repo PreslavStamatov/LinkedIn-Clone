@@ -7,6 +7,7 @@ function CentralContainer() {
 
   return (
     <div id='central-container'>
+      
       <HiringSection></HiringSection>
       <PostWritingSection></PostWritingSection>
       

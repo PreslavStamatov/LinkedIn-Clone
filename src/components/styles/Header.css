@@ -16,13 +16,14 @@
 
 .header-search {
   background-color: rgb(245, 245, 245);
-  border-radius: 2px;
+  border-radius: 0px;
   display: flex;
   height: 65%;
   width: 280px;
   align-items: center;
-  transition: 1s;
 }
+
+
 
 .header-search > img {
   box-sizing: border-box;
@@ -36,6 +37,7 @@
   box-sizing: border-box;
   height: 65%;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .header-search > input {
@@ -52,3 +54,14 @@
   height: 100%;
 }
 
+
+
+.friendSearchResults {
+  position: absolute;
+  top: 44px;
+  background-color: rgb(245, 245, 245);
+  width: 280px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: -10 ;
+}

@@ -7,7 +7,10 @@ import RightContainer from './components/RightContainer';
 import { selectUser } from './features/user/userSlice';
 import { useSelector } from 'react-redux';
 import Login from './components/Login';
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import FriendProfile from './components/FriendProfile';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -16,9 +19,12 @@ function App() {
   const user = useSelector(selectUser);
 
   return (
+    
     <Routes>
+      
       <Route path='/' element={user ? 
         <div className='app'>
+         
         <Header></Header>
 
         <div id='main-content-container'>
@@ -27,9 +33,17 @@ function App() {
           <RightContainer></RightContainer>
         </div>
         
-        </div> : <Login></Login>} />
+        <ToastContainer/>
+        </div> : 
+        <>
+        <Login></Login>
+        <ToastContainer/>
+        </>} />
       
+        <Route path='/friend' element={<FriendProfile></FriendProfile>} />
+        
     </Routes>
+    
   );
 }
 
